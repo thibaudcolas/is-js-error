@@ -1,0 +1,45 @@
+{
+  "name": "is-js-error",
+  "version": "0.4.0",
+  "description": "TODO",
+  "author": "Thibaud Colas <thib@thib.me> (https://github.com/ThibWeb)",
+  "license": "ISC",
+  "homepage": "https://github.com/ThibWeb/is-js-error#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThibWeb/is-js-error.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThibWeb/is-js-error/issues"
+  },
+  "keywords": [
+    "TODO"
+  ],
+  "engines": {
+    "node": ">=0.12"
+  },
+  "dependencies": {
+    "nightmare": "^2.0.7",
+    "vo": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.3",
+    "chai": "^3.3.0",
+    "eslint": "^1.5.0",
+    "eslint-config-airbnb": "0.0.8",
+    "isparta": "^3.0.4",
+    "mocha": "^2.3.3",
+    "rollup": "^0.20.0"
+  },
+  "scripts": {
+    "lint": "eslint --cache .",
+    "test:unit": "mocha --compilers js:babel/register",
+    "test:unit:watch": "mocha --watch --compilers js:babel/register",
+    "test:unit:coverage": "babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha",
+    "pretest": "npm run lint -s",
+    "test": "npm run test:unit -s",
+    "test:ci": "npm run build -s && npm run test -s",
+    "start": "node index.js"
+  }
+}
