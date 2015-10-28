@@ -1,7 +1,6 @@
 import meow from 'meow';
 import logSymbols from 'log-symbols';
-import normalizeUrl from 'normalize-url';
-import isJSError from './lib/is-js-error';
+import checkURL from './lib/check-url';
 
 const cli = meow(`
     Example
@@ -22,7 +21,7 @@ const normalizeOptions = {
 
 const url = normalizeUrl(cli.input[0], normalizeOptions);
 
-isJSError(url, (err, result) => {
+checkURL(url, (err, result) => {
     if (err) return console.log(err);
 
     console.log(result);
