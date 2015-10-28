@@ -18,7 +18,13 @@
   "engines": {
     "node": ">=0.12"
   },
+  "bin": {
+    "is-js-error": "./index.js"
+  },
   "dependencies": {
+    "babel-runtime": "^5.8.29",
+    "log-symbols": "^1.0.2",
+    "meow": "^3.4.2",
     "nightmare": "^2.0.7",
     "vo": "^1.0.3"
   },
@@ -30,7 +36,7 @@
     "eslint-config-airbnb": "0.0.8",
     "isparta": "^3.0.4",
     "mocha": "^2.3.3",
-    "rollup": "^0.20.0"
+    "rollup": "^0.20.2"
   },
   "scripts": {
     "lint": "eslint --cache .",
@@ -40,6 +46,7 @@
     "pretest": "npm run lint -s",
     "test": "npm run test:unit -s",
     "test:ci": "npm run build -s && npm run test -s",
+    "build": "rollup cli.js | babel --optional runtime > es5-bundle.js",
     "start": "node index.js"
   }
 }

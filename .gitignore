@@ -19,6 +19,4 @@ bower_components
 .anaconda
 .eslintcache
 
-es5/
-src/static/bundle.js
-src/static/submission.js
+es5-bundle.js

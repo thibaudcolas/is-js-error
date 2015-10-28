@@ -1,14 +1,9 @@
 node_modules
 *.min.js
-**/lib/
 .grunt
 coverage
 lib-cov
 public
 static
 
-es5/
-src/static/bundle.js
-src/static/submission.js
-tests/
-**/solution/solution.js
+es5-bundle.js
