@@ -15,6 +15,8 @@ describe('Check URL', function describeCheckURL() {
         checkURL('https://thib.me', (err, result) => {
             if (err) return console.log(err);
 
+            console.log(result);
+
             expect(result.indexOf('https')).to.equal(0);
             done();
         });

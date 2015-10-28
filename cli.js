@@ -1,5 +1,6 @@
 import meow from 'meow';
 import logSymbols from 'log-symbols';
+import parseURL from './lib/parse-url';
 import checkURL from './lib/check-url';
 
 const cli = meow(`
@@ -13,13 +14,7 @@ if (cli.input.length === 0) {
     process.exit(1);
 }
 
-const normalizeOptions = {
-    normalizeProtocol: true,
-    stripFragment: false,
-    stripWWW: false,
-};
-
-const url = normalizeUrl(cli.input[0], normalizeOptions);
+const url = parseURL(cli.input[0]);
 
 checkURL(url, (err, result) => {
     if (err) return console.log(err);
