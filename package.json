@@ -25,7 +25,7 @@
     "babel-runtime": "^5.8.29",
     "log-symbols": "^1.0.2",
     "meow": "^3.4.2",
-    "nightmare": "^2.0.7",
+    "nightmare": "segmentio/nightmare#e556285",
     "normalize-url": "^1.3.1",
     "vo": "^1.0.3"
   },
