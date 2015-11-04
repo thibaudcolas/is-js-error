@@ -1,15 +1,22 @@
 is-js-error [![npm](https://img.shields.io/npm/v/is-js-error.svg?style=flat-square)](https://www.npmjs.com/package/is-js-error) [![Build Status](https://img.shields.io/travis/ThibWeb/is-js-error.svg?style=flat-square)](https://travis-ci.org/ThibWeb/is-js-error) [![dependency Status](https://img.shields.io/david/ThibWeb/is-js-error.svg?style=flat-square)](https://david-dm.org/ThibWeb/is-js-error) [![devDependency Status](https://img.shields.io/david/dev/ThibWeb/is-js-error.svg?style=flat-square)](https://david-dm.org/ThibWeb/is-js-error)
 ==========
 
-> TODO
+> Check if a page contains a JavaScript error
 
 ## Installation
 
-`npm install --save is-js-error`
+`npm install -g is-js-error`
 
 ## Usage
 
-TODO
+From the command line,
+
+```
+$ is-js-error example.com
+✔ OK
+```
+
+The exit status is 1 for a page that fails to load and 2 for a JS error.
 
 ## Contributing
 
@@ -27,7 +34,9 @@ npm install -g eslint babel-eslint eslint-config-airbnb
 
 To run the tests:
 
-TODO
+```sh
+npm run test
+```
 
 To release a new version:
 
