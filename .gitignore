@@ -20,3 +20,4 @@ bower_components
 .eslintcache
 
 es5-bundle.js
+tmp.js

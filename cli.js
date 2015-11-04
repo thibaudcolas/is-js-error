@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import meow from 'meow';
 import logSymbols from 'log-symbols';
 import parseURL from './lib/parse-url';
