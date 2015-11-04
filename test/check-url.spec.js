@@ -7,7 +7,9 @@ import checkURL from '../lib/check-url';
 import testServer from './server';
 
 
-describe('Check URL', () => {
+describe('Check URL', function testChechkURL() {
+    this.timeout(5000);
+
     it('should export a function', () => {
         expect(checkURL).to.be.a('function');
     });

@@ -30,6 +30,7 @@
   "engines": {
     "node": ">=0.12"
   },
+  "preferGlobal": true,
   "bin": {
     "is-js-error": "./index.js"
   },
