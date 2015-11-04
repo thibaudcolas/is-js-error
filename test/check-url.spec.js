@@ -5,7 +5,7 @@ import checkURL from '../lib/check-url';
 import testServer from './server';
 
 
-describe('Check URL', function() {
+describe('Check URL', () => {
     it('should export a function', () => {
         expect(checkURL).to.be.a('function');
     });
