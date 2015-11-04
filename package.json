@@ -53,9 +53,10 @@
   },
   "scripts": {
     "lint": "eslint --cache .",
-    "test:unit": "mocha --compilers js:babel/register",
     "pretest": "npm run lint -s",
-    "test": "npm run test:unit -s",
+    "test:output": "./test.sh",
+    "test:unit": "mocha --compilers js:babel/register",
+    "test": "npm run test:unit -s && npm run test:output -s",
     "test:ci": "npm run build -s && npm run test -s",
     "prepublish": "npm run build -s",
     "build": "rollup cli.js | babel --optional runtime > es5-bundle.js",
