@@ -57,6 +57,7 @@
     "pretest": "npm run lint -s",
     "test": "npm run test:unit -s",
     "test:ci": "npm run build -s && npm run test -s",
+    "prepublish": "npm run build -s",
     "build": "rollup cli.js | babel --optional runtime > es5-bundle.js",
     "start": "node index.js"
   }
