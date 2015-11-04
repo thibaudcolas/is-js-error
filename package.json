@@ -1,7 +1,7 @@
 {
   "name": "is-js-error",
   "version": "0.4.0",
-  "description": "TODO",
+  "description": "Check if a page contains a JavaScript error",
   "author": "Thibaud Colas <thib@thib.me> (https://github.com/ThibWeb)",
   "license": "ISC",
   "homepage": "https://github.com/ThibWeb/is-js-error#readme",
@@ -13,7 +13,19 @@
     "url": "https://github.com/ThibWeb/is-js-error/issues"
   },
   "keywords": [
-    "TODO"
+    "browser",
+    "error",
+    "ci",
+    "qa",
+    "nightmare",
+    "phantom",
+    "slimer",
+    "electron",
+    "website",
+    "webpage",
+    "ip",
+    "live",
+    "running"
   ],
   "engines": {
     "node": ">=0.12"
@@ -42,8 +54,6 @@
   "scripts": {
     "lint": "eslint --cache .",
     "test:unit": "mocha --compilers js:babel/register",
-    "test:unit:watch": "mocha --watch --compilers js:babel/register",
-    "test:unit:coverage": "babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha",
     "pretest": "npm run lint -s",
     "test": "npm run test:unit -s",
     "test:ci": "npm run build -s && npm run test -s",
