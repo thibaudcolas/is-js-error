@@ -6,7 +6,7 @@ import checkURL from './lib/check-url';
 const cli = meow(`
     Example
       $ is-js-error example.com
-      ${logSymbols.success} No
+      ${logSymbols.success} OK
 `);
 
 if (cli.input.length === 0) {
@@ -16,8 +16,7 @@ if (cli.input.length === 0) {
 
 const url = parseURL(cli.input[0]);
 
-checkURL(url, (err, result) => {
-    if (err) return console.log(err);
-
-    console.log(result);
+checkURL(url, (err, hasError) => {
+    console.log(!hasError ? `${logSymbols.success} OK` : `${logSymbols.error} KO`);
+    process.exit(!hasError ? 0 : 2);
 });
