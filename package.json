@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.0.16",
+    "got": "^5.1.0",
     "log-symbols": "^1.0.2",
     "meow": "^3.4.2",
     "nightmare": "segmentio/nightmare#e556285",
@@ -49,9 +50,9 @@
     "babel-preset-es2015": "^6.0.15",
     "chai": "^3.3.0",
     "eslint": "^1.8.0",
-    "eslint-config-airbnb": "^0.1.0",
+    "eslint-config-airbnb": "^0.1.1",
     "mocha": "^2.3.3",
-    "rollup": "^0.20.2"
+    "rollup": "^0.20.5"
   },
   "scripts": {
     "lint": "eslint --cache .",
