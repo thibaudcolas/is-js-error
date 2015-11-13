@@ -20,13 +20,14 @@ The exit status is 1 for a page that fails to load and 2 for a JS error.
 
 ## Contributing
 
-> You first need to clone the project on your computer, and to install [Node](https://nodejs.org).
+> You first need to clone the project on your computer, and to install [Node](https://nodejs.org). This project uses [nvm](https://github.com/creationix/nvm) to execute a specific node version.
 
 Install the project with:
 
 ```sh
 git clone git@github.com:ThibWeb/is-js-error.git
 cd is-js-error
+nvm install
 npm install
 npm install -g eslint babel-eslint eslint-config-airbnb
 ./.githooks/deploy

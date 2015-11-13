@@ -7,5 +7,6 @@
 .gitignore
 .travis.yml
 .npmignore
+.nvmrc
 test/
 test.sh
