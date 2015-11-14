@@ -9,7 +9,25 @@ $COMMAND --version
 $COMMAND --help
 
 $COMMAND https://rawgit.com/ThibWeb/is-js-error/master/test/no-error.html
-echo $?
+CODE=$?
+echo $CODE
+if [ $CODE -ne 0 ];
+then
+    exit 1;
+fi
 
 $COMMAND https://rawgit.com/ThibWeb/is-js-error/master/test/error.html
-echo $?
+CODE=$?
+echo $CODE
+if [ $CODE -ne 2 ];
+then
+    exit 1;
+fi
+
+$COMMAND https://rawgit.com/ThibWeb/is-js-error/master/test/notfound.html
+CODE=$?
+echo $CODE
+if [ $CODE -ne 1 ];
+then
+    exit 1;
+fi
