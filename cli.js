@@ -18,7 +18,14 @@ if (cli.input.length === 0) {
 
 const url = parseURL(cli.input[0]);
 
-checkURL(url, (err, hasError) => {
-    console.log(!hasError ? `${logSymbols.success} OK` : `${logSymbols.error} KO`);
-    process.exit(!hasError ? 0 : 2);
+checkURL(url, (err, results) => {
+    if (err) {
+        console.log(`${logSymbols.warning} ${err}`);
+        process.exit(1);
+    } else {
+        const hasError = results[1];
+
+        console.log(hasError ? `${logSymbols.error} KO` : `${logSymbols.success} OK`);
+        process.exit(hasError ? 2 : 0);
+    }
 });

@@ -19,7 +19,7 @@ describe('Check URL', function testChechkURL() {
 
         checkURL('http://localhost:4001/', (err, result) => {
             expect(err).to.equal(null);
-            expect(result).to.equal(false);
+            expect(result[1]).to.equal(false);
 
             done();
 
@@ -32,20 +32,11 @@ describe('Check URL', function testChechkURL() {
 
         checkURL('http://localhost:4002/', (err, result) => {
             expect(err).to.equal(null);
-            expect(result).to.equal(true);
+            expect(result[1]).to.equal(true);
 
             done();
 
             server.close();
-        });
-    });
-
-    it('should get an error when the url does not load', (done) => {
-        checkURL('http://localhost:4003/', (err, result) => {
-            expect(err).to.equal(null);
-            expect(result).to.equal(false);
-
-            done();
         });
     });
 });
