@@ -8,7 +8,10 @@ $COMMAND --version
 
 $COMMAND --help
 
-$COMMAND https://rawgit.com/ThibWeb/is-js-error/master/test/no-error.html
+node test/start-server.js &
+SERVER_PID=$!
+
+$COMMAND http://localhost:4001/no-error
 CODE=$?
 echo $CODE
 if [ $CODE -ne 0 ];
@@ -16,7 +19,7 @@ then
     exit 1;
 fi
 
-$COMMAND https://rawgit.com/ThibWeb/is-js-error/master/test/error.html
+$COMMAND http://localhost:4001/error
 CODE=$?
 echo $CODE
 if [ $CODE -ne 2 ];
@@ -24,10 +27,12 @@ then
     exit 1;
 fi
 
-$COMMAND https://rawgit.com/ThibWeb/is-js-error/master/test/notfound.html
+$COMMAND http://localhost:9999/notfound
 CODE=$?
 echo $CODE
 if [ $CODE -ne 1 ];
 then
     exit 1;
 fi
+
+kill $SERVER_PID
