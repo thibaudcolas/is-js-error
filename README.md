@@ -16,7 +16,11 @@ $ is-js-error example.com
 ✔ OK
 ```
 
-The exit status is 1 for a page that fails to load and 2 for a JS error.
+The exit status is `1` for a page that fails to load and `2` for a JS error.
+
+### In continuous integration
+
+This project relies on [Electron](https://github.com/atom/electron), which requires a GUI. See the [following Travis guide](http://docs.travis-ci.com/user/gui-and-headless-browsers/).
 
 ## Contributing
 
