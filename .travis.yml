@@ -5,6 +5,8 @@ node_js:
 - '0.12'
 install:
 - npm install
+before_script:
+- npm run test:start-server
 script:
 - npm run test
 notifications:

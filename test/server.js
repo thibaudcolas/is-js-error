@@ -1,13 +1,15 @@
 import http from 'http';
 
-function createTestServer(isJSError = false, port = process.env.PORT || 4000) {
+function createTestServer(port = process.env.PORT || 4000) {
     const server = http.createServer((req, res) => {
+        const returnError = req.url.indexOf('/error') !== -1;
+
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(`
             <html>
                 <body>
                     <script>
-                        ${isJSError ? 'throw new Error();' : ''}
+                        ${returnError ? 'throw new Error();' : ''}
                         document.write('test');
                     </script>
                 </body>
@@ -18,7 +20,4 @@ function createTestServer(isJSError = false, port = process.env.PORT || 4000) {
     return server;
 }
 
-export default {
-    noErrorTest: createTestServer.bind(null, false),
-    errorTest: createTestServer.bind(null, true),
-};
+export default createTestServer;

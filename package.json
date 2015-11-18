@@ -58,8 +58,9 @@
     "lint": "eslint --cache .",
     "pretest": "npm run lint -s",
     "test:output": "./test.sh",
-    "test:unit": "mocha --compilers js:babel-core/register",
+    "test:unit": "mocha --compilers js:babel-core/register -- test/*.spec.js",
     "test": "npm run build -s && npm run test:unit -s && npm run test:output -s",
+    "test:start-server": "babel-node test/start-server.js",
     "prepublish": "npm run build -s",
     "build": "rollup cli.js > tmp.js && babel tmp.js > es5-bundle.js && rm -rf tmp.js",
     "start": "node index.js"
