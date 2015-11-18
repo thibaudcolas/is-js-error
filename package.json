@@ -28,7 +28,7 @@
     "running"
   ],
   "engines": {
-    "node": ">=4.0"
+    "node": ">=5.0"
   },
   "preferGlobal": true,
   "bin": {
