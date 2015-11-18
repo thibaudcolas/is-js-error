@@ -39,6 +39,12 @@ To run the tests:
 npm run test
 ```
 
+Test pages:
+
+- https://rawgit.com/ThibWeb/is-js-error/master/test/no-error.html
+- https://rawgit.com/ThibWeb/is-js-error/master/test/error.html
+- https://rawgit.com/ThibWeb/is-js-error/master/test/notfound.html
+
 To release a new version:
 
 ```sh
