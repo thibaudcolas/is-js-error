@@ -8,10 +8,10 @@ $COMMAND --version
 
 $COMMAND --help
 
-node test/start-server.js &
+node -e "require('babel-core/register'); require('./test/server').default(4002);" &
 SERVER_PID=$!
 
-$COMMAND http://localhost:4001/no-error
+$COMMAND http://localhost:4002/no-error
 CODE=$?
 echo $CODE
 if [ $CODE -ne 0 ];
@@ -19,7 +19,7 @@ then
     exit 1;
 fi
 
-$COMMAND http://localhost:4001/error
+$COMMAND http://localhost:4002/error
 CODE=$?
 echo $CODE
 if [ $CODE -ne 2 ];
