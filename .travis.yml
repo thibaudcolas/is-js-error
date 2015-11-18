@@ -1,12 +1,10 @@
 sudo: false
 language: node_js
 node_js:
-- '5.0'
+- 'stable'
 - '0.12'
 install:
 - npm install
-before_script:
-- npm run test:start-server -s &
 script:
 - npm run test
 notifications:
