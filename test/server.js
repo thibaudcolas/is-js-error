@@ -1,15 +1,32 @@
 import http from 'http';
 
+function generateTestCode(hasError, hasWait) {
+    let code;
+
+    if (hasError) {
+        if (hasWait) {
+            code = 'setTimeout(function () { throw new Error(); }, 2000);';
+        } else {
+            code = 'throw new Error();';
+        }
+    } else {
+        code = '';
+    }
+
+    return code;
+}
+
 function createTestServer(port = process.env.PORT || 4000) {
     const server = http.createServer((req, res) => {
-        const returnError = req.url.indexOf('/error') !== -1;
+        const hasError = req.url.indexOf('/error') !== -1;
+        const hasWait = req.url.indexOf('wait') !== -1;
 
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(`
             <html>
                 <body>
                     <script>
-                        ${returnError ? 'throw new Error();' : ''}
+                        ${generateTestCode(hasError, hasWait)}
                         document.write('test');
                     </script>
                 </body>

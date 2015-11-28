@@ -53,9 +53,9 @@ describe('Check URL', function testChechkURL() {
     it('should take more time before returning for non-default wait parameters', (done) => {
         let ran = false;
 
-        checkURL('http://localhost:9999/notfound', 2000, (err, result) => {
-            expect(err).to.not.equal(null);
-            expect(typeof result).to.equal('undefined');
+        checkURL('http://localhost:4001/no-error', 2000, (err, result) => {
+            expect(err).to.equal(null);
+            expect(result[1]).to.equal(false);
 
             ran = true;
         });
@@ -68,5 +68,23 @@ describe('Check URL', function testChechkURL() {
             expect(ran).to.equal(true);
             done();
         }, 4500);
+    });
+
+    it('should fail to detect errors that are not immediate with default wait', (done) => {
+        checkURL('http://localhost:4001/error-wait', 1000, (err, result) => {
+            expect(err).to.equal(null);
+            expect(result[1]).to.equal(false);
+
+            done();
+        });
+    });
+
+    it('should succeed at detecting errors that are not immediate with custom wait', (done) => {
+        checkURL('http://localhost:4001/error-wait', 2500, (err, result) => {
+            expect(err).to.equal(null);
+            expect(result[1]).to.equal(true);
+
+            done();
+        });
     });
 });
