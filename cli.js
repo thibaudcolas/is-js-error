@@ -17,8 +17,9 @@ if (cli.input.length === 0) {
 }
 
 const url = parseURL(cli.input[0]);
+const maxWait = cli.flags.wait || cli.flags.w || 1000;
 
-checkURL(url, (err, results) => {
+checkURL(url, maxWait, (err, results) => {
     if (err) {
         console.log(`${logSymbols.warning} ${err}`);
         process.exit(1);
