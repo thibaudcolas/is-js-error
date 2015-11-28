@@ -49,4 +49,24 @@ describe('Check URL', function testChechkURL() {
             done();
         });
     });
+
+    it('should take more time before returning for non-default wait parameters', (done) => {
+        let ran = false;
+
+        checkURL('http://localhost:9999/notfound', 2000, (err, result) => {
+            expect(err).to.not.equal(null);
+            expect(typeof result).to.equal('undefined');
+
+            ran = true;
+        });
+
+        setTimeout(() => {
+            expect(ran).to.equal(false);
+        }, 1000);
+
+        setTimeout(() => {
+            expect(ran).to.equal(true);
+            done();
+        }, 4500);
+    });
 });
