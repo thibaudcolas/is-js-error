@@ -9,6 +9,13 @@ const cli = meow(`
     Example
       $ is-js-error example.com
       ${logSymbols.success} OK
+      $ is-js-error example.com --wait 3000
+      ${logSymbols.success} OK
+
+    Options
+      --help,      Display this help
+      --version,   Display the version number
+      --wait [ms], Wait for a given period before reporting no error.
 `);
 
 if (cli.input.length === 0) {
@@ -17,7 +24,7 @@ if (cli.input.length === 0) {
 }
 
 const url = parseURL(cli.input[0]);
-const maxWait = Math.max(cli.flags.wait || cli.flags.w, 1000);
+const maxWait = Math.max(cli.flags.wait, 1000);
 
 checkURL(url, maxWait, (err, results) => {
     if (err) {
