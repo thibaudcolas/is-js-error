@@ -11,8 +11,11 @@ is-js-error [![npm](https://img.shields.io/npm/v/is-js-error.svg?style=flat-squa
 
 From the command line,
 
-```
+```sh
 $ is-js-error example.com
+✔ OK
+# With a specific time to wait for before reporting no error,
+$ is-js-error example.com --wait 3000
 ✔ OK
 ```
 
