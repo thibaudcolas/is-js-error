@@ -14,7 +14,7 @@ From the command line,
 ```sh
 $ is-js-error example.com
 ✔ OK
-# With a specific time to wait for before reporting no error,
+# With a specific time to wait for before reporting no error (in ms)
 $ is-js-error example.com --wait 3000
 ✔ OK
 ```
