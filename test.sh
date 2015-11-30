@@ -11,6 +11,9 @@ $COMMAND --help
 node -e "require('babel-core/register'); require('./test/server').default(4002);" &
 SERVER_PID=$!
 
+# Waiting for server to load.
+sleep 3
+
 echo "No JS error"
 $COMMAND http://localhost:4002/no-error
 CODE=$?
