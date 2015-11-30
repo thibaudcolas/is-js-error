@@ -1,7 +1,7 @@
 import http from 'http';
 
 function generateTestCode(hasError, hasWait) {
-    let code;
+    var code;
 
     if (hasError) {
         if (hasWait) {
@@ -17,9 +17,9 @@ function generateTestCode(hasError, hasWait) {
 }
 
 function createTestServer(port = process.env.PORT || 4000) {
-    const server = http.createServer((req, res) => {
-        const hasError = req.url.indexOf('/error') !== -1;
-        const hasWait = req.url.indexOf('wait') !== -1;
+    var server = http.createServer((req, res) => {
+        var hasError = req.url.indexOf('/error') !== -1;
+        var hasWait = req.url.indexOf('wait') !== -1;
 
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(`
