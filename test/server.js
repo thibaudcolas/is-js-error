@@ -1,5 +1,7 @@
 import http from 'http';
 
+/* eslint-disable no-var */
+
 function generateTestCode(hasError, hasWait) {
     var code;
 
