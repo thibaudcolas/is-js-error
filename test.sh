@@ -20,6 +20,7 @@ CODE=$?
 echo $CODE
 if [ $CODE -ne 0 ];
 then
+    kill $SERVER_PID;
     exit 1;
 fi
 
@@ -29,6 +30,7 @@ CODE=$?
 echo $CODE
 if [ $CODE -ne 2 ];
 then
+    kill $SERVER_PID;
     exit 1;
 fi
 
@@ -38,6 +40,7 @@ CODE=$?
 echo $CODE
 if [ $CODE -ne 1 ];
 then
+    kill $SERVER_PID;
     exit 1;
 fi
 
@@ -47,6 +50,7 @@ CODE=$?
 echo $CODE
 if [ $CODE -ne 0 ];
 then
+    kill $SERVER_PID;
     exit 1;
 fi
 
@@ -56,7 +60,9 @@ CODE=$?
 echo $CODE
 if [ $CODE -ne 2 ];
 then
+    kill $SERVER_PID;
     exit 1;
 fi
 
 kill $SERVER_PID
+exit 0
