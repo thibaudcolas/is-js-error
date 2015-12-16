@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+node -e "require('babel-core/register'); require('./test/server').default(4002);" &
+SERVER_PID=$!
+
+# Waiting for server to load.
+sleep 3
+
 COMMAND="node index.js"
 
 $COMMAND
@@ -7,12 +13,6 @@ $COMMAND
 $COMMAND --version
 
 $COMMAND --help
-
-node -e "require('babel-core/register'); require('./test/server').default(4002);" &
-SERVER_PID=$!
-
-# Waiting for server to load.
-sleep 3
 
 echo "No JS error"
 $COMMAND http://localhost:4002/no-error
