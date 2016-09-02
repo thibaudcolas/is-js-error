@@ -1,24 +1,26 @@
 sudo: false
 language: node_js
 node_js:
-- '4'
+- 0.12
+- 4
+- node
 install:
 - npm install
 before_script:
-- "export DISPLAY=:99.0"
-- "sh -e /etc/init.d/xvfb start"
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 - sleep 3
 script:
 - npm run test
 notifications:
   email:
     on_success: change
-    on_failure: always
+on_failure: always
 deploy:
   provider: npm
-  email: thib@thib.me
+  email: thibaudcolas@gmail.com
   api_key:
-    secure: ObZ3pwh+1rNpDirnKpN5MeQB7ufBviO9MOEQNA1dSlliDmhmuSaWxij9yPNJ2wj63vIGDCexz5y/cQoQ8QzCmbx074ajZWZV1CgB362mTuKCvV6XoVZtfnMbYRVWVwxjsadk6KExc+8I5U/QC61xQGT4PfMEn1KrBs8qTytTT8cgYulWqfA3NhGcK+zD5eImsZVjt9btKjYfIR8EaFbj6tl/eb95sL5lSspmmp9jo2DN1sv7HN5LvDSoXMcB5+bkZ/pjrFcKro7ha3MK5+xqtrJsvIr5gr3u2jJk5OIQOvNQGjL0D4qxOLMZvpY4nJ7YSFRt1YEyWwfmUzi6/TxvUp8WgDNxdutVvyjir3mgQw28Tjr5WeeI1rmHyMKy9uyVqGlzdNMd6NIafTYFbyJeCdKy9rzTSEHfuPrafKGE1bmA6Bp2q3qi63U8gBjRQ2KI4PFfReImii0nHjz5NCoY9ekZ6YtsQsTYkZjaCB22tXZmWP6D2TgimHNs2ZSBg2OCDa0eI2bRPJHrkas7crRzK+CtLdKY/uYb+z96wp3zuAV5Qygp9bzTtIwTlk+PfP/tqHOyKNBrjRWQaXVxswk9XUQa0eADd0oDFuBnFFIqUK90ROrDGCSaNYc+WkMVjRyNBZqAd2jj1YX6mWjjmTTOX1B8c1OfkltnEjDEePrdgXY=
+    secure: Z6dUgVYQYaPFI+xP7+7TXh2VBZwO5JnlUbVv6YyP7DsCtqqDnOubDQFyQnwpjP9KuWjSbAul0Y7qKgwtqcKTQfTopEdaGaGAZ/hswo8AL6sIha153Adig6TBDbxfJ89dNDTyFh1z5hJnD5SqrkvFsVi/pEZUe06aYPm7NTrnf1eKXDqawwZOiIaslr4wRshW4Es2r0NNfiH2PU4KGPoA3N0PNh7CXdJq7tizztCBwLha/CfU9UDFQu6Dw4z5yYGsZXU1HTRFqNArqfqN76bcpaENL0uS43VE3n6LdGY2pR3Kn6A80c/ejgNGP5O0SpvNhSK9Ezd5465yP5S1n8AhBYZZmR/k5OUEavx3LGDsQt78fQ0HgnZH+hjBGpd2BVS8QW0xO+DSc5XtZCQnm7q1Oxhumf5fivmTjYbYhuxHeXmnQuelO9CCzNE6DR0cNDDtPMTo+b7t5lxjMTGdz9JiXZKL6fwDhMAZIXcOZjQKCLPtgnSMuACEdgHgDUOFMx8gi6m+Y8NVTNDiqbDtI2CkV+VloAeD88cmLv9meRcwYa0hU2UjW7jTOX52U+Hvo876+RU0rTjxXafiduOfmADt5rmNnoNcY9+/cA8S8YfnuEY/cYlb8PWXqGmA2f0awCm470tD1QnMZZF3Qyvi4oeo1yj2AcaOJ4qM1MPKi4yEtmk=
   on:
     tags: true
     repo: ThibWeb/is-js-error
