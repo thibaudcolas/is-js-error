@@ -5,15 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## TODO [[1.0.0]](https://github.com/ThibWeb/is-js-error/releases/tag/1.0.0) - 2015-XX-XX
+## TODO [[1.0.0]](https://github.com/thibaudcolas/is-js-error/releases/tag/1.0.0) - 2015-XX-XX
 
 First stable release!
 
 ## Changes
 
-- [start...1.0.0](https://github.com/ThibWeb/is-js-error/compare/3751e465af44f402ba7018a252fc9c3049830d86...1.0.0)
+- [start...1.0.0](https://github.com/thibaudcolas/is-js-error/compare/3751e465af44f402ba7018a252fc9c3049830d86...1.0.0)
 
-## [[x.y.z]](https://github.com/ThibWeb/is-js-error/releases/tag/x.y.z) - YYYY-MM-DD (Template: http://keepachangelog.com/)
+## [[x.y.z]](https://github.com/thibaudcolas/is-js-error/releases/tag/x.y.z) - YYYY-MM-DD (Template: http://keepachangelog.com/)
 
 ### Added
 

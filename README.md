@@ -1,4 +1,4 @@
-is-js-error [![npm](https://img.shields.io/npm/v/is-js-error.svg?style=flat-square)](https://www.npmjs.com/package/is-js-error) [![Build Status](https://img.shields.io/travis/ThibWeb/is-js-error.svg?style=flat-square)](https://travis-ci.org/ThibWeb/is-js-error) [![dependency Status](https://img.shields.io/david/ThibWeb/is-js-error.svg?style=flat-square)](https://david-dm.org/ThibWeb/is-js-error) [![devDependency Status](https://img.shields.io/david/dev/ThibWeb/is-js-error.svg?style=flat-square)](https://david-dm.org/ThibWeb/is-js-error)
+is-js-error [![npm](https://img.shields.io/npm/v/is-js-error.svg?style=flat-square)](https://www.npmjs.com/package/is-js-error) [![Build Status](https://img.shields.io/travis/thibaudcolas/is-js-error.svg?style=flat-square)](https://travis-ci.org/thibaudcolas/is-js-error) [![dependency Status](https://img.shields.io/david/thibaudcolas/is-js-error.svg?style=flat-square)](https://david-dm.org/thibaudcolas/is-js-error) [![devDependency Status](https://img.shields.io/david/dev/thibaudcolas/is-js-error.svg?style=flat-square)](https://david-dm.org/thibaudcolas/is-js-error)
 ==========
 
 > Check if a page contains a JavaScript error
@@ -32,7 +32,7 @@ This project relies on [Electron](https://github.com/atom/electron), which requi
 Install the project with:
 
 ```sh
-git clone git@github.com:ThibWeb/is-js-error.git
+git clone git@github.com:thibaudcolas/is-js-error.git
 cd is-js-error
 nvm install
 npm install
@@ -48,9 +48,9 @@ npm run test
 
 Test pages:
 
-- https://rawgit.com/ThibWeb/is-js-error/master/test/no-error.html
-- https://rawgit.com/ThibWeb/is-js-error/master/test/error.html
-- https://rawgit.com/ThibWeb/is-js-error/master/test/notfound.html
+- https://rawgit.com/thibaudcolas/is-js-error/master/test/no-error.html
+- https://rawgit.com/thibaudcolas/is-js-error/master/test/error.html
+- https://rawgit.com/thibaudcolas/is-js-error/master/test/notfound.html
 
 To release a new version:
 

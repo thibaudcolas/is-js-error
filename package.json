@@ -2,15 +2,15 @@
   "name": "is-js-error",
   "version": "0.7.1",
   "description": "Check if a page contains a JavaScript error",
-  "author": "Thibaud Colas <thib@thib.me> (https://github.com/ThibWeb)",
+  "author": "Thibaud Colas <thib@thib.me> (https://github.com/thibaudcolas)",
   "license": "ISC",
-  "homepage": "https://github.com/ThibWeb/is-js-error#readme",
+  "homepage": "https://github.com/thibaudcolas/is-js-error#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThibWeb/is-js-error.git"
+    "url": "git+https://github.com/thibaudcolas/is-js-error.git"
   },
   "bugs": {
-    "url": "https://github.com/ThibWeb/is-js-error/issues"
+    "url": "https://github.com/thibaudcolas/is-js-error/issues"
   },
   "keywords": [
     "browser",
