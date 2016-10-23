@@ -12,9 +12,9 @@ before_script:
 script:
 - npm run test
 notifications:
-  email:
-    on_success: change
-on_failure: always
+  email: false
+  slack:
+    secure: DL+gvVIPILv0F0e3NT28X/cIhpteniqAJLVLZmGm1J4lYp4czTNSTgZIMWc/7l3Y+kQ0topbekAMrlKeIdqLROsHZqCy1ts0FvNllVZWFbHEL51TFDLN+7Nnblsef2PhGmarts6NIrCDRoYwMiuQRqnY401HnNTX4yKH4YAa6cmbUFv/WB1kdABZpGRDGHqUJDkxlt+l9dkRm3UvSm3zv/TCpHT8eo8X7h6qHk1BBFxdtle4+l7UG9gHKPxhOG4vT9lThXbGhk9Wu/CZMKvN+0nygZDIRtq+vlVltq+qXsYRxb/oFXrZuOJYAHaCnbfzw9zKjJlZOloMPm0DD10/jiiq95gB1PKlUH2DyZvvIWWMPSKx640jGPeAeikylfRCpw+GrYK+4NWaETSmcjcYsMEiay8SzYQVdjh1yl8DXfne0dcFa4VoluVreqPOtpOns+LSf6HwmnW04m99qA9M7DICCqCjJP2a8RAEvqWdxlKTpfdLF5dLuferkQjcG9nxXL8T32juNukpSb9eCnY4QH11BhbqOujUfjh+RjZhiAWiejpKAZCp0v7OjXcdtvMvmfiyndySMAgZQA6Vw6w2gnOPfSJnWSIy1KCt41x3LuQCXIs1/DbvYsbolCqIJmT8zY1pa1YFBz97O2cXH6dkeTIQ7bO8hJNkdFD14lOQ7vQ=
 deploy:
   provider: npm
   email: thibaudcolas@gmail.com
