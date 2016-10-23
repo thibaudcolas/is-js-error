@@ -1,6 +1,6 @@
 {
   "name": "is-js-error",
-  "version": "0.7.1",
+  "version": "1.0.0",
   "description": "Check if a page contains a JavaScript error",
   "author": "Thibaud Colas <thib@thib.me> (https://github.com/thibaudcolas)",
   "license": "ISC",
