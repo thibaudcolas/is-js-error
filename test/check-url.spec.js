@@ -26,7 +26,7 @@ describe('Check URL', function testChechkURL() {
     it('should report correctly when there is no JS error', (done) => {
         checkURL('http://localhost:4001/no-error', 1000, (err, result) => {
             expect(err).to.equal(null);
-            expect(result[1]).to.equal(false);
+            expect(result[0]).to.equal(false);
 
             done();
         });
@@ -35,7 +35,7 @@ describe('Check URL', function testChechkURL() {
     it('should report correctly when there is a JS error', (done) => {
         checkURL('http://localhost:4001/error', 1000, (err, result) => {
             expect(err).to.equal(null);
-            expect(result[1]).to.equal(true);
+            expect(result[0]).to.equal(true);
 
             done();
         });
@@ -55,7 +55,7 @@ describe('Check URL', function testChechkURL() {
 
         checkURL('http://localhost:4001/no-error', 2000, (err, result) => {
             expect(err).to.equal(null);
-            expect(result[1]).to.equal(false);
+            expect(result[0]).to.equal(false);
 
             ran = true;
         });
@@ -73,7 +73,7 @@ describe('Check URL', function testChechkURL() {
     it('should fail to detect errors that are not immediate with default wait', (done) => {
         checkURL('http://localhost:4001/error-wait', 1000, (err, result) => {
             expect(err).to.equal(null);
-            expect(result[1]).to.equal(false);
+            expect(result[0]).to.equal(false);
 
             done();
         });
@@ -82,7 +82,7 @@ describe('Check URL', function testChechkURL() {
     it('should succeed at detecting errors that are not immediate with custom wait', (done) => {
         checkURL('http://localhost:4001/error-wait', 2500, (err, result) => {
             expect(err).to.equal(null);
-            expect(result[1]).to.equal(true);
+            expect(result[0]).to.equal(true);
 
             done();
         });

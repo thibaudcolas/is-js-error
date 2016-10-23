@@ -24,14 +24,14 @@ if (cli.input.length === 0) {
 }
 
 const url = parseURL(cli.input[0]);
-const maxWait = Math.max(cli.flags.wait, 1000);
+const maxWait = cli.flags.wait ? Math.max(parseInt(cli.flags.wait, 10), 1000) : 1000;
 
 checkURL(url, maxWait, (err, results) => {
     if (err) {
         console.log(`${logSymbols.warning} ${err}`);
         process.exit(1);
     } else {
-        const hasError = results[1];
+        const hasError = results[0];
 
         console.log(hasError ? `${logSymbols.error} KO` : `${logSymbols.success} OK`);
         process.exit(hasError ? 2 : 0);
